@@ -7,9 +7,11 @@ app is cli interface only !!!
 
 os windows 10 64 bit
 
+in other platforms need to install ffmpeg binaryes 
+
 usage:
 
 
-  downloader.exe https://horjuntv.com.tm/ru/watch/ZYVbg
+  python3 downloader.py https://horjuntv.com.tm/ru/watch/ZYVbg
   
 thats all :)
