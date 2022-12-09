@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import subprocess
-import ffpb
+import platform
 
 
 class download:
@@ -27,5 +27,8 @@ class download:
             print('Yalnys sayladynoooooooooow')
             selected = 1
         p = qualityes[selected-1]['src']
-        cmd = 'ffpb.exe' + ' -i ' + p + ' "' + namefile + '(' + resolution[selected-1] + ')' + '.mp4"'
+        if platform.system() == "Windows":
+            cmd = 'ffpb.exe' + ' -i ' + p + ' "' + namefile + '(' + resolution[selected-1] + ')' + '.mp4"'
+        else:
+            cmd = 'ffpb' + ' -i ' + p + ' "' + namefile + '(' + resolution[selected-1] + ')' + '.mp4"'
         subprocess.run(cmd)
